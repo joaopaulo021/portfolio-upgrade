@@ -3,17 +3,18 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import headerImg from '../../assets/img/header-img.svg'
 import './styles.css'
+
 const Banner = () => {
     const [loopNum, setLoopNum] = useState(0)
     const [isDeleting, setIsDeleting] = useState(false)
     const [text, setText] = useState('')
-    const toRotate = ['front end', 'teste', 'ux design']
+    const toRotate = [' Front End ! ', ' teste 1 ', ' teste 2 ']
     const [delta, setDelta] = useState(300 - Math.random() * 100)
     const period = 2000
 
     useEffect(() => {
         let ticker = setInterval(() => {
-            tick()
+            tick();
         }, delta)
 
         return () => { clearInterval(ticker) }
@@ -29,7 +30,7 @@ const Banner = () => {
         if (isDeleting) {
             setDelta(prevDelta => prevDelta / 2)
         }
-        if (isDeleting && updatedText === fullText) {
+        if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true)
             setDelta(period)
 
@@ -48,9 +49,9 @@ const Banner = () => {
                     <Row className='align-items-center'>
                         <Col xs={ 12 } md={ 6 } xl={ 7 } >
                             <span className='tagline'>Bem vindo ao meu portfolio</span>
-                            <h1>{ `Olá ! eu sou um webfocker` }<span className='wrap'>{ text }</span></h1>
-                            <p>aaaaaaaaaaaaaaaaaaaaaaaasflakfafshsjahfjahfjkasfhjkafhjkfahjkasjksa</p>
-                            <button onClick={ () => console.log("deu boa") }>chama</button>
+                            <h1>{ `Olá ! meu nome é João Paulo, sou Dev` }<span className='wrap'>{ text }</span></h1>
+                            <p>texto seção descrição </p>
+                            <button onClick={ () => console.log("clicou") }>chama</button>
                         </Col>
                         <Col xs={ 12 } xl={ 5 }>
                             <img src={ headerImg } alt="Header img" />
