@@ -44,7 +44,7 @@ const Banner = () => {
 							<span className='tagline'>Bem vindo ao meu portfolio !</span>
 							<h1><span className='wrap'>{ text }</span></h1>
 							<p>Sou desenvolvedor Web, apaixonado por criar aplicações interativas e dinâmicas. Meu objetivo é combinar minhas habilidades com meu olhar criativo para entregar os melhores resultados. Tenho experiência em desenvolver aplicações web responsivas e otimizadas, utilizando as melhores práticas e as últimas tecnologias. Meu portfólio apresenta uma seleção de projetos nos quais demonstro minha capacidade de construir aplicações funcionais de forma eficiente. Buscando sempre expandir meu conhecimento no universo do desenvolvimento tanto front-end como back-end. Convido você a explorar meu portfólio para ver alguns exemplos do meu trabalho.</p>
-							<button onClick={ () => console.log("clicou") }>Baixar Curriculo<ArrowRightCircle /></button>
+							<a target="_blank" href='https://drive.google.com/file/d/1YpKqX2yLEoFb35hjc1oMgr3tQIablNax/view?usp=sharing'><button>Baixar Curriculo<ArrowRightCircle /></button></a>
 						</div>
 					</Col>
 				</Row>
