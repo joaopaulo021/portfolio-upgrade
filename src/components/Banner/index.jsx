@@ -1,67 +1,56 @@
 import { useState, useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
-import headerImg from '../../assets/img/header-img.svg'
-import './styles.css'
 
 const Banner = () => {
-    const [loopNum, setLoopNum] = useState(0)
-    const [isDeleting, setIsDeleting] = useState(false)
-    const [text, setText] = useState('')
-    const toRotate = [' Front End ! ', ' teste 1 ', ' teste 2 ']
-    const [delta, setDelta] = useState(300 - Math.random() * 100)
-    const period = 2000
+	const [loopNum, setLoopNum] = useState(0)
+	const [isDeleting, setIsDeleting] = useState(false)
+	const [text, setText] = useState('')
+	const toRotate = [' Olá meu nome é João Paulo, sou desenvolvedor Web !']
+	const [delta, setDelta] = useState(50 - Math.random() * 50)
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta)
+	useEffect(() => {
+		let ticker = setInterval(() => {
+			tick();
+		}, delta)
 
-        return () => { clearInterval(ticker) }
-    }, [text])
+		return () => { clearInterval(ticker) }
 
-    const tick = () => {
-        let i = loopNum % toRotate.length
-        let fullText = toRotate[i]
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
+	}, [text])
 
-        setText(updatedText)
+	const tick = () => {
+		let i = loopNum % toRotate.length
+		let fullText = toRotate[i]
+		let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
 
-        if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 2)
-        }
-        if (!isDeleting && updatedText === fullText) {
-            setIsDeleting(true)
-            setDelta(period)
+		setText(updatedText)
 
-        } else if (isDeleting && updatedText === '') {
-            setIsDeleting(false)
-            setLoopNum(loopNum + 1)
-            setDelta(500)
+		if (isDeleting) {
+			setDelta(prevDelta => prevDelta / 2)
 
-        }
-    }
+		} else if (isDeleting && updatedText === '') {
+			setIsDeleting(false)
+			setLoopNum(loopNum + 1)
+			setDelta(500)
+		}
+	}
 
-    return (
-        <>
-            <section className='banner' id='home'>
-                <Container>
-                    <Row className='align-items-center'>
-                        <Col xs={ 12 } md={ 6 } xl={ 7 } >
-                            <span className='tagline'>Bem vindo ao meu portfolio</span>
-                            <h1>{ `Olá ! meu nome é João Paulo, sou Dev` }<span className='wrap'>{ text }</span></h1>
-                            <p>texto seção descrição </p>
-                            <button onClick={ () => console.log("clicou") }>chama</button>
-                        </Col>
-                        <Col xs={ 12 } xl={ 5 }>
-                            <img src={ headerImg } alt="Header img" />
-                        </Col>
-                    </Row>
-                </Container>
-
-            </section>
-        </>
-    )
+	return (
+		<section className='banner' id='home'>
+			<Container>
+				<Row className='aligh-items-center'>
+					<Col xs={ 12 } md={ 6 } xl={ 7 } >
+						<div>
+							<span className='tagline'>Bem vindo ao meu portfolio !</span>
+							<h1><span className='wrap'>{ text }</span></h1>
+							<p>Sou desenvolvedor Web, apaixonado por criar aplicações interativas e dinâmicas. Meu objetivo é combinar minhas habilidades com meu olhar criativo para entregar os melhores resultados. Tenho experiência em desenvolver aplicações web responsivas e otimizadas, utilizando as melhores práticas e as últimas tecnologias. Meu portfólio apresenta uma seleção de projetos nos quais demonstro minha capacidade de construir aplicações funcionais de forma eficiente. Buscando sempre expandir meu conhecimento no universo do desenvolvimento tanto front-end como back-end. Convido você a explorar meu portfólio para ver alguns exemplos do meu trabalho.</p>
+							<button onClick={ () => console.log("clicou") }>Baixar Curriculo<ArrowRightCircle /></button>
+						</div>
+					</Col>
+				</Row>
+			</Container>
+		</section>
+	)
 }
 
 export default Banner
