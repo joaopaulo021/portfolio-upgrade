@@ -1,10 +1,16 @@
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url("./assets/img/banner10-2.jpg");
+  background-image: url("./assets/img/bannernew.png");
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 480px) {
+  .banner {
+    background-image: url("./assets/img/banner-bg.png");
+  }
 }
 .banner .tagline {
   font-weight: 700;
@@ -17,17 +23,28 @@
   margin-bottom: 16px;
   display: inline-block;
 }
+@media screen and (max-width: 480px) {
+  .banner .tagline {
+    margin-top: 100px;
+  }
+}
 .banner h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
+  color: #8431ff;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
   display: block;
 }
+@media screen and (max-width: 480px) {
+  .banner h1 {
+    color: #fff;
+  }
+}
 .banner p {
   color: #f1f0f0;
-  font-size: 18px;
+  font-size: 1rem;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;

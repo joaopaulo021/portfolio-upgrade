@@ -9,6 +9,11 @@
   padding: 60px 50px;
   margin-top: -60px;
 }
+@media screen and (max-width: 480px) {
+  .skill .skill-bx {
+    padding: 10px 5px;
+  }
+}
 .skill .skill-bx h2 {
   font-size: 45px;
   font-weight: 700;
