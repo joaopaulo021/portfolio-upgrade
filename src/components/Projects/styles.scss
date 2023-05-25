@@ -1,0 +1,93 @@
+.project {
+    padding: 80px 0;
+    position: relative;
+    background-color: black;
+    h2 {
+        font-size: 45px;
+        font-weight: 700;
+        text-align: center;
+    }
+    p {
+        color: #B8B8B8;
+        font-size: 18px;
+        letter-spacing: 0.8px;
+        line-height: 1.5em;
+        margin: 14px auto 30px auto;
+        text-align: center;
+        width: 56%;
+    }
+    .nav.nav-pills {
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        background-color: rgb(255 255 255 / 10%);
+        overflow: hidden;
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+        .nav-item {
+            width: 33.33333%;
+        }
+        .nav-item1 {
+            border-radius: 55px;
+            &::before {
+                border-top-left-radius: 55px;
+                border-bottom-left-radius: 55px;
+            }
+        }
+        .nav-item3 {
+            border-radius: 55px;
+            &::before {
+                border-top-right-radius: 70px;
+                border-bottom-right-radius: 70px;
+            }
+        }
+        .nav-link {
+            background-color: transparent;
+            border-radius: 0;
+            padding: 17px 0;
+            color: #fff;
+            width: 100%;
+            font-size: 17px;
+            letter-spacing: 0.8px;
+            font-weight: 500;
+            position: relative;
+            transition: 0.3s ease-in-out;
+            text-align: center;
+            z-index: 0;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 100%;
+                background: linear-gradient( #280a52, #7257eb);
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: 0.3s ease-in-out;
+            }
+            &.active::before {
+                width: 100% !important;
+            }
+            &.active {
+                border: 2px solid rgba(255, 255, 255, 1);
+            }
+        }
+        #projects-tabs-tab-first.nav-link {
+            border-radius: 55px 0px 0px 55px;
+        }
+        #projects-tabs-tab-second.nav-link {}
+        #projects-tabs-tab-third.nav-link {
+            border-radius: 0 55px 55px 0;
+        }
+    }
+    .background-image-right {
+        top: 20%;
+        position: absolute;
+        bottom: 0;
+        width: 35%;
+        right: 0;
+        z-index: -4;
+    }
+}

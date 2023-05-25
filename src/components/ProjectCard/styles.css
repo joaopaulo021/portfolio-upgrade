@@ -1,57 +1,58 @@
 .proj-imgbx {
-    position: relative;
-    border-radius: 30px;
-    overflow: hidden;
-    height: 300px;
-    margin-bottom: 24px;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 300px;
+  margin-bottom: 24px;
 }
-
-.proj-imgbx video {
-    width: 100%;
-    object-fit: cover;
-    height: 100%;
+.proj-imgbx img {
+  width: 100%;
+  height: 100%;
 }
-
 .proj-imgbx::before {
-    content: "";
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    opacity: 0.85;
-    position: absolute;
-    width: 100%;
-    height: 0;
-    transition: 0.4s ease-in-out;
+  content: "";
+  background: linear-gradient(90deg, #280a52, #4A2FBD);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
 }
-
 .proj-imgbx:hover::before {
-    height: 100%;
+  height: 100%;
 }
-
-.proj-txtx {
-    position: absolute;
-    text-align: center;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.5s ease-in-out;
-    opacity: 0;
-    width: 100%;
+.proj-imgbx .proj-txtx {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
 }
-
+.proj-imgbx .proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-imgbx .proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+.proj-imgbx .proj-txtx a {
+  text-align: center;
+  width: 50%;
+  color: gold;
+  text-decoration: underline;
+}
 .proj-imgbx:hover .proj-txtx {
-    top: 50%;
-    opacity: 1;
-}
-
-.proj-txtx h4 {
-    font-size: 30px;
-    font-weight: 700;
-    letter-spacing: 0.8px;
-    line-height: 1.1em;
-}
-
-.proj-txtx span {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 0.8px;
-}
+  top: 50%;
+  opacity: 1;
+}/*# sourceMappingURL=styles.css.map */

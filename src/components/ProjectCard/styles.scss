@@ -1,0 +1,58 @@
+.proj-imgbx {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 300px;
+    margin-bottom: 24px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    &::before {
+        content: "";
+        background: linear-gradient(90deg, #280a52, #4A2FBD);
+        opacity: 0.85;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        transition: 0.4s ease-in-out;
+    }
+    &:hover::before {
+        height: 100%;
+    }
+    .proj-txtx {
+        position: absolute;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        width: 100%;
+        h4 {
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            line-height: 1.1em;
+        }
+        span {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 15px;
+            letter-spacing: 0.8px;
+        }
+        a {
+            text-align: center;
+            width: 50%;
+            color: gold;
+            text-decoration: underline;
+        }
+    }
+    &:hover .proj-txtx {
+        top: 50%;
+        opacity: 1;
+    }
+}
