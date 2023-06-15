@@ -38,12 +38,12 @@ const Projects = () => {
     imgUrl: projImg4,
   },
 
-  {
-    title: "NK 14 Sporting",
-    description: "E-commerce completo, desenvolvido para uma loja de camisas de futebol, com diversas funcionalidades e sistema de pagamento online integrado.",
-    link: "https://www.nk14sporting.com.br",
-    imgUrl: projImg3,
-  },
+  // {
+  //   title: "NK 14 Sporting",
+  //   description: "E-commerce completo, desenvolvido para uma loja de camisas de futebol, com diversas funcionalidades e sistema de pagamento online integrado.",
+  //   link: "https://www.nk14sporting.com.br",
+  //   imgUrl: projImg3,
+  // },
 
   {
 
