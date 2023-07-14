@@ -1,14 +1,16 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap"
+import {Container, Row, Col, Tab, Nav} from "react-bootstrap"
 import colorSharp2 from '../../assets/img/color-sharp2.png'
 import ProjectCard from "../ProjectCard"
 import projImg1 from "../../assets/img/webappcontrole.png"
 import projImg2 from "../../assets/img/gravgraf.png"
-import projImg3 from "../../assets/img/nk14.png"
+import projImg3 from "../../assets/img/hotelAdmin.png"
 import projImg4 from "../../assets/img/circuito-mulher.png"
 import projImg5 from "../../assets/img/filmeson.png"
 import projImg6 from "../../assets/img/scrimbo.png"
+import projImg7 from "../../assets/img/simuladorEmprestimo.png"
+import projImg8 from "../../assets/img/geradorpaleta.png"
 
-import { useEffect, useRef } from "react"
+import {useEffect, useRef} from "react"
 import ScrollReveal from "scrollreveal"
 
 const Projects = () => {
@@ -16,7 +18,7 @@ const Projects = () => {
   const projectBxRef = useRef(null);
 
   useEffect(() => {
-    const sr = ScrollReveal({ reset: true });
+    const sr = ScrollReveal({reset: true});
     sr.reveal(projectBxRef.current, {
       distance: "50px",
       origin: "bottom",
@@ -44,9 +46,14 @@ const Projects = () => {
   //   link: "https://www.nk14sporting.com.br",
   //   imgUrl: projImg3,
   // },
+  {
+    title: "Cadastro de reservas Hotel",
+    description: "Web app de cadastro de reservas de hotel, insere,busca,edita e deleta os registros",
+    link: "https://hotel-bookings-theta.vercel.app/",
+    imgUrl: projImg3,
+  },
 
   {
-
     title: "Web App finanças",
     description: "Projeto de finanças que calcula as entradas e saidas e te mostra o total salvando os dados no navegador",
     link: "https://app-controle-financeiro-dun.vercel.app",
@@ -61,6 +68,19 @@ const Projects = () => {
   },
 
   {
+    title: "Gerador de paleta de cores",
+    description: "Gerador de paleta de cores onde voce insera sua cor em hexadecimal e o app te mostra tonalidades da cor selecionada",
+    link: "https://gerador-paleta-cores.vercel.app/",
+    imgUrl: projImg8,
+  },
+  {
+    title: "Simulador de empréstimo",
+    description: "Web app de simulador de emprestimo com juros de 5% aplicado ",
+    link: "https://teste-react-2.vercel.app/",
+    imgUrl: projImg7,
+  },
+
+  {
     title: "The Scrimbo Game",
     description: "um dos primerios projetos que desenvolvi, um minigame estilo 'endless runner' (versão apenas p/ desktop!) ",
     link: "https://joaopaulo021.github.io/Game-c-Javascript/",
@@ -72,8 +92,8 @@ const Projects = () => {
     <section className="project" id="projects">
       <Container>
         <Row>
-          <Col size={ 12 }>
-            <div ref={ projectBxRef }>
+          <Col size={12}>
+            <div ref={projectBxRef}>
               <h2> Projetos</h2>
               <p>Confira alguns de meus trabalhos!</p>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -105,8 +125,8 @@ const Projects = () => {
                         projects.map((project, index) => {
                           return (
                             <ProjectCard
-                              key={ index }
-                              { ...project }
+                              key={index}
+                              {...project}
                             />
                           )
                         })
@@ -125,7 +145,7 @@ const Projects = () => {
           </Col>
         </Row>
       </Container >
-      <img className="background-image-right" src={ colorSharp2 } alt="" />
+      <img className="background-image-right" src={colorSharp2} alt="" />
     </section >
 
   )
