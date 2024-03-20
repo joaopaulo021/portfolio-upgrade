@@ -8,9 +8,13 @@
         width: 100%;
         height: 100%;
     }
+    video {
+        width: 100%;
+        height: 100%;
+    }
     &::before {
         content: "";
-        background: linear-gradient(90deg, #280a52, #4A2FBD);
+        background: linear-gradient(90deg, #280a52, #4a2fbd);
         opacity: 0.85;
         position: absolute;
         width: 100%;
@@ -51,6 +55,7 @@
             text-decoration: underline;
         }
     }
+
     &:hover .proj-txtx {
         top: 50%;
         opacity: 1;
