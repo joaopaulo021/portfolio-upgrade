@@ -70,37 +70,36 @@ const Projects = () => {
     {
       title: "Cadastro de reservas Hotel",
       description: "Web app de cadastro de reservas de hotel, insere,busca,edita e deleta os registros",
-      link: "https://hotel-bookings-theta.vercel.app/",
+      link: "https://teste-front-end-phi.vercel.app/",
       imgUrl: projImg3,
     },
 
     {
       title: "Web App finanças",
       description: "Projeto de finanças que calcula as entradas e saidas e te mostra o total salvando os dados no navegador",
-      link: "https://app-controle-financeiro-dun.vercel.app",
+      link: "https://app-controle-financeiro-two.vercel.app/",
       imgUrl: projImg1,
     },
 
     {
       title: "Recomendação de filmes",
       description: "Mostra os lançamentos recentes de filmes com base nas recomendações do themovieDB",
-      link: "https://filmes-on.vercel.app",
+      link: "https://filmes-on-drab.vercel.app/",
       imgUrl: projImg5,
     },
 
     {
       title: "Gerador de paleta de cores",
       description: "Gerador de paleta de cores onde voce insera sua cor em hexadecimal e o app te mostra tonalidades da cor selecionada",
-      link: "https://gerador-paleta-cores.vercel.app/",
+      link: "https://gerador-paleta-cores-delta.vercel.app/",
       imgUrl: projImg8,
     },
     {
       title: "Simulador de empréstimo",
       description: "Web app de simulador de emprestimo com juros de 5% aplicado ",
-      link: "https://teste-react-2.vercel.app/",
+      link: "https://teste-react-beta.vercel.app/",
       imgUrl: projImg7,
     },
-
     {
       title: "The Scrimbo Game",
       description: "um dos primerios projetos que desenvolvi, um minigame estilo 'endless runner' (versão apenas p/ desktop!) ",
