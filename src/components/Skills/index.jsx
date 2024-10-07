@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import js from "../../assets/img/js.png"
 import node from "../../assets/img/node.png"
+import mysql from "../../assets/img/mysql.png"
 import scss from "../../assets/img/scss.png"
 import reactLogo from "../../assets/img/react.png"
 import typescript from "../../assets/img/typescript.svg"
@@ -51,39 +52,43 @@ const Skills = () => {
 			<Container>
 				<Row>
 					<Col>
-						<div ref={ skillBxRef } className="skill-bx" >
+						<div ref={skillBxRef} className="skill-bx" >
 							<h2>Skills</h2>
 							<p>Essas são as tecnologias que eu utlizo no meu dia a dia.</p>
 							<Carousel
-								responsive={ responsive }
-								infinite={ true }
+								responsive={responsive}
+								infinite={true}
 								className="owl-carousel owl-theme skill-slider"
 							>
 								<div className="item">
-									<img src={ reactLogo } alt="skill-image" />
+									<img src={reactLogo} alt="skill-image" />
 									<h5>React.js</h5>
 								</div>
 								<div className="item">
-									<img src={ js } alt="skill-image" />
+									<img src={js} alt="skill-image" />
 									<h5>JavaScript</h5>
 								</div>
 								<div className="item">
-									<img src={ typescript } alt="skill-image" />
+									<img src={typescript} alt="skill-image" />
 									<h5>Typescript</h5>
 								</div>
 								<div className="item">
-									<img src={ node } alt="skill-image" />
+									<img src={node} alt="skill-image" />
 									<h5>Node.js</h5>
 								</div>
 								<div className="item">
-									<img src={ scss } alt="skill-image" />
+									<img src={mysql} alt="skill-image" />
+									<h5>MySql</h5>
+								</div>
+								<div className="item">
+									<img src={scss} alt="skill-image" />
 									<h5>SCSS</h5>
 								</div>
 							</Carousel>
 						</div>
 					</Col>
 				</Row>
-				<img className="background-image-left" src={ colorSharp } />
+				<img className="background-image-left" src={colorSharp} />
 			</Container>
 		</section>
 	);
