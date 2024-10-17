@@ -24,7 +24,7 @@ const ContactForm = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		setButtonText("enviando..")
-		let response = await fetch("https://email-server-portfolio.onrender.com/contact", {
+		let response = await fetch("https://emailserverportfolio-dkyqco82.b4a.run/contact", {
 			method: "POST",
 			headers: {
 				"Content-Type": "Application/json;charset=utf-8",
@@ -46,31 +46,31 @@ const ContactForm = () => {
 		<section className="contact" id="contato">
 			<Container>
 				<Row>
-					<Col md={ 6 }>
-						<img src={ contactImg } alt="" />
+					<Col md={6}>
+						<img src={contactImg} alt="" />
 					</Col>
-					<Col md={ 6 }>
+					<Col md={6}>
 						<h2>Me manda uma mensagem !</h2>
-						<form onSubmit={ handleSubmit }>
+						<form onSubmit={handleSubmit}>
 							<Row>
-								<Col sm={ 6 } className='px-1'>
-									<input type="text" value={ formDetails.firstName } placeholder="Digite seu nome" onChange={ (e) => onFormUpdate('firstName', e.target.value) } />
+								<Col sm={6} className='px-1'>
+									<input type="text" value={formDetails.firstName} placeholder="Digite seu nome" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
 								</Col>
-								<Col sm={ 6 } className='px-1'>
-									<input type="text" value={ formDetails.lastName } placeholder="Digite seu sobrenome" onChange={ (e) => onFormUpdate('lastName', e.target.value) } />
+								<Col sm={6} className='px-1'>
+									<input type="text" value={formDetails.lastName} placeholder="Digite seu sobrenome" onChange={(e) => onFormUpdate('lastName', e.target.value)} />
 								</Col>
-								<Col sm={ 6 } className='px-1'>
-									<input type="email" value={ formDetails.email } placeholder="Digite seu email" onChange={ (e) => onFormUpdate('email', e.target.value) } />
+								<Col sm={6} className='px-1'>
+									<input type="email" value={formDetails.email} placeholder="Digite seu email" onChange={(e) => onFormUpdate('email', e.target.value)} />
 								</Col>
 								<Col>
-									<textarea value={ formDetails.message } placeholder="Digite sua mensagem!" id="" rows="6" onChange={ (e) => onFormUpdate('message', e.target.value) }></textarea>
+									<textarea value={formDetails.message} placeholder="Digite sua mensagem!" id="" rows="6" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
 									{
 										status.message &&
 										<Col className="msg-container">
-											<p className={ status.sucess === false ? "danger" : "sucess" }>{ status.message }</p>
+											<p className={status.sucess === false ? "danger" : "sucess"}>{status.message}</p>
 										</Col>
 									}
-									<button type="submit"><span>{ buttonText }</span></button>
+									<button type="submit"><span>{buttonText}</span></button>
 								</Col>
 							</Row>
 						</form>
