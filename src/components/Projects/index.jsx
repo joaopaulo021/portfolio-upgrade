@@ -10,6 +10,7 @@ import projImg6 from "../../assets/img/scrimbo.png"
 import projImg7 from "../../assets/img/simuladorEmprestimo.png"
 import projImg8 from "../../assets/img/geradorpaleta.png"
 import projImg9 from "../../assets/img/imagenator.png"
+import projImg10 from "../../assets/img/nk14.png"
 
 import video1 from "../../assets/video/ecoart.mp4"
 import video2 from "../../assets/video/magal.mp4"
@@ -61,12 +62,12 @@ const Projects = () => {
       imgUrl: projImg4,
     },
 
-    // {
-    //   title: "NK 14 Sporting",
-    //   description: "E-commerce completo, desenvolvido para uma loja de camisas de futebol, com diversas funcionalidades e sistema de pagamento online integrado.",
-    //   link: "https://www.nk14sporting.com.br",
-    //   imgUrl: projImg3,
-    // },
+    {
+      title: "NK 14 Sporting",
+      description: "E-commerce completo, desenvolvido para uma loja de camisas de futebol, com diversas funcionalidades e sistema de pagamento online integrado.",
+      link: "https://www.nk14sporting.com.br",
+      imgUrl: projImg10,
+    },
     {
       title: "Cadastro de reservas Hotel",
       description: "Web app de cadastro de reservas de hotel, insere,busca,edita e deleta os registros",
@@ -109,11 +110,11 @@ const Projects = () => {
   ]
 
   return (
-    <section className="project" id="projects">
+    <section className="project" id="projects" ref={projectBxRef}>
       <Container>
         <Row>
           <Col size={12}>
-            <div ref={projectBxRef}>
+            <div >
               <h2> Projetos</h2>
               <p>Confira alguns de meus trabalhos!</p>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
