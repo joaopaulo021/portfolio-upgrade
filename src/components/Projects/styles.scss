@@ -1,5 +1,4 @@
 .project {
-    padding: 80px 0;
     position: relative;
     background-color: black;
     h2 {
@@ -8,7 +7,7 @@
         text-align: center;
     }
     p {
-        color: #B8B8B8;
+        color: #b8b8b8;
         font-size: 18px;
         letter-spacing: 0.8px;
         line-height: 1.5em;
@@ -61,7 +60,7 @@
                 position: absolute;
                 width: 0;
                 height: 100%;
-                background: linear-gradient( #280a52, #7257eb);
+                background: linear-gradient(#280a52, #7257eb);
                 top: 0;
                 left: 0;
                 z-index: -1;
@@ -77,7 +76,8 @@
         #projects-tabs-tab-first.nav-link {
             border-radius: 55px 0px 0px 55px;
         }
-        #projects-tabs-tab-second.nav-link {}
+        #projects-tabs-tab-second.nav-link {
+        }
         #projects-tabs-tab-third.nav-link {
             border-radius: 0 55px 55px 0;
         }
