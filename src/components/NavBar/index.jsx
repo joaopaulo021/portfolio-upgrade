@@ -56,8 +56,11 @@ const navBar = () => {
 							<a target="_blank" href='https://wa.me/5514996842832'><FaWhatsapp className='nav-icon' /></a>
 							<a target="_blank" href='https://github.com/joaopaulo021/'><FaGithub className='nav-icon' /></a>
 						</div>
-						<a href="#contato"><button className="vvd"><span>Mensagem</span></button></a>
-						<a target='_blank' href="https://drive.google.com/file/d/1ekDnTiFMyTYnzRonDrI4L2XM7dFUH7IF/view?usp=sharing"><button className="vvd"><span>Currículo</span></button></a>
+
+						<div className="btns">
+							<a href="#contato"><button ><span>Mensagem</span></button></a>
+							<a target='_blank' href="https://drive.google.com/file/d/1ekDnTiFMyTYnzRonDrI4L2XM7dFUH7IF/view?usp=sharing"><button className="vvd"><span>Currículo</span></button></a>
+						</div>
 					</span>
 				</Navbar.Collapse>
 			</Container >

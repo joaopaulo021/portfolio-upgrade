@@ -114,7 +114,8 @@ nav.navbar {
             transition: 0.3s ease-in-out;
         }
         &:hover img {
-            filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+            filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%)
+                contrast(86%);
         }
     }
 }
@@ -124,7 +125,8 @@ nav.navbar {
 }
 
 .social-icon a:hover .nav-icon {
-    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%)
+        contrast(86%);
 }
 
 @keyframes iconTransition {
@@ -133,5 +135,26 @@ nav.navbar {
     }
     to {
         transform: scale(0);
+    }
+}
+
+@media (max-width: 768px) {
+    nav.navbar {
+        .navbar-text {
+            padding: 1rem;
+            .btns {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                button {
+                    font-size: 18px;
+                    margin-left: 0;
+                    background-color: transparent;
+                    transition: 0.3s ease-in-out;
+                    margin-top: 0.5rem;
+                    width: 100%;
+                }
+            }
+        }
     }
 }
